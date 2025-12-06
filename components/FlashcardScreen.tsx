@@ -116,7 +116,7 @@ const FlashcardScreen: React.FC<FlashcardScreenProps> = ({ chapter, topic }) => 
                 <button 
                     onClick={handlePrev} 
                     disabled={currentIndex === 0}
-                    className="flex items-center gap-2 px-6 py-3 bg-[var(--card-bg)] border border-[var(--card-border)] rounded-lg font-semibold hover:bg-opacity-80 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    className="flex items-center gap-2 px-6 py-3 bg-[var(--card-bg)] border border-[var(--card-border)] rounded-lg font-semibold hover:bg-opacity-80 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-[color:var(--text-primary)]"
                     aria-label="Previous card"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
@@ -126,7 +126,7 @@ const FlashcardScreen: React.FC<FlashcardScreenProps> = ({ chapter, topic }) => 
                 <button 
                     onClick={handleNext} 
                     disabled={currentIndex === flashcards.length - 1}
-                    className="flex items-center gap-2 px-6 py-3 bg-[var(--card-bg)] border border-[var(--card-border)] rounded-lg font-semibold hover:bg-opacity-80 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    className="flex items-center gap-2 px-6 py-3 bg-[var(--card-bg)] border border-[var(--card-border)] rounded-lg font-semibold hover:bg-opacity-80 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-[color:var(--text-primary)]"
                     aria-label="Next card"
                 >
                     Next
