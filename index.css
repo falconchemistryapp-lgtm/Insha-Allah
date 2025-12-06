@@ -591,3 +591,21 @@ button {
   background: transparent;
   border: none;
 }
+
+/* FIX: Specific class for the onboarding button to avoid JIT syntax issues */
+.onboarding-button {
+  margin-top: 3rem;
+  padding: 0.75rem 2rem;
+  background-color: transparent;
+  border: 2px solid #00FF9C;
+  border-radius: 9999px;
+  color: #00FF9C;
+  font-weight: 600;
+  transition: all 300ms;
+  box-shadow: 0 0 15px rgba(0, 255, 156, 0.5);
+}
+.onboarding-button:hover {
+  background-color: #00FF9C;
+  color: black;
+  box-shadow: 0 0 25px rgba(0, 255, 156, 0.8);
+}
