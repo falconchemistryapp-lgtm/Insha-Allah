@@ -44,13 +44,6 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate, theme, toggleTheme, 
           >
             <FeedbackIcon />
           </button>
-          <button
-            onClick={toggleTheme}
-            className={iconButtonClass}
-            aria-label="Toggle theme"
-          >
-            {theme === 'light' ? <MoonIcon /> : <SunIcon />}
-          </button>
         </div>
       </div>
     </header>
