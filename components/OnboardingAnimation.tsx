@@ -122,9 +122,7 @@ export const OnboardingAnimation: React.FC<OnboardingAnimationProps> = ({ onStar
       </p>
       <button
         onClick={onStart}
-        className="mt-12 px-8 py-3 bg-transparent border-2 border-[#00FF9C] rounded-full text-[#00FF9C] font-semibold
-                   hover:bg-[#00FF9C] hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(0,255,156,0.5)]
-                   hover:shadow-[0_0_25px_rgba(0,255,156,0.8)] animate-fadeIn"
+        className="onboarding-button animate-fadeIn"
         style={{ animationDelay: '2s' }}
       >
         Let's Learn
