@@ -106,7 +106,7 @@ export const OnboardingAnimation: React.FC<OnboardingAnimationProps> = ({ onStar
         </svg>
       </div>
       
-      <h1 className="text-8xl md:text-9xl font-semibold tracking-wider mt-4 opacity-0 animate-text-fade-in-up" style={{ fontFamily: "'Poppins', sans-serif" }}>
+      <h1 className="text-8xl md:text-9xl font-semibold tracking-wider mt-4 animate-text-fade-in-up" style={{ fontFamily: "'Poppins', sans-serif" }}>
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-700 via-emerald-800 to-teal-900">
           Phys
         </span>
@@ -115,14 +115,14 @@ export const OnboardingAnimation: React.FC<OnboardingAnimationProps> = ({ onStar
         </span>
       </h1>
        <p 
-        className="opacity-0 mt-4 text-lg text-cyan-200 tracking-wide animate-fadeIn" 
+        className="mt-4 text-lg text-cyan-200 tracking-wide animate-fadeIn" 
         style={{ animationDelay: '1.5s' }}
       >
         Ignite the spark of physics.
       </p>
       <button
         onClick={onStart}
-        className="opacity-0 mt-12 px-8 py-3 bg-transparent border-2 border-[#00FF9C] rounded-full text-[#00FF9C] font-semibold
+        className="mt-12 px-8 py-3 bg-transparent border-2 border-[#00FF9C] rounded-full text-[#00FF9C] font-semibold
                    hover:bg-[#00FF9C] hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(0,255,156,0.5)]
                    hover:shadow-[0_0_25px_rgba(0,255,156,0.8)] animate-fadeIn"
         style={{ animationDelay: '2s' }}
@@ -130,7 +130,7 @@ export const OnboardingAnimation: React.FC<OnboardingAnimationProps> = ({ onStar
         Let's Learn
       </button>
       <div 
-        className="absolute bottom-4 left-0 right-0 opacity-0 text-xs text-slate-500 text-center animate-fadeIn"
+        className="absolute bottom-4 left-0 right-0 text-xs text-slate-500 text-center animate-fadeIn"
         style={{ animationDelay: '2.2s' }}
       >
           <p>Developed by: Umme Kulsum, Zoya Arshi, Minha, Falcon Institute, Mysore Road Campus, Bangalore</p>
