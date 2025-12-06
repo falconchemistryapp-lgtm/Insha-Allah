@@ -89,10 +89,10 @@ button:disabled { cursor: not-allowed; }
 .animate-spin { animation: spin 1s linear infinite; }
 .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
 .animate-bounce { animation: bounce 1s infinite; }
-.animate-fadeIn { animation: fadeIn 1s ease-in-out forwards; }
+.animate-fadeIn { animation: fadeIn 1s ease-in-out both; }
 .animate-pop-in { animation: pop-in 0.3s cubic-bezier(.22,.9,.12,1); }
 .animate-card-enter { animation: card-enter 0.6s cubic-bezier(.22,.9,.12,1) backwards; }
-.animate-text-fade-in-up { animation: text-fade-in-up 1.5s ease-out 0.5s forwards; }
+.animate-text-fade-in-up { animation: text-fade-in-up 1.5s ease-out 0.5s both; }
 .animate-logo-pulse { animation: logo-pulse 3s infinite ease-in-out; }
 
 /* --- Utility Classes --- */
