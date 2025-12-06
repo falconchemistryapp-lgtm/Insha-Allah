@@ -37,6 +37,15 @@ const playCorrectSound = () => {
     oscillator.stop(audioCtx.currentTime + 0.1);
 };
 
+// Fisher-Yates shuffle algorithm
+const shuffleArray = (array: any[]) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+};
+
 
 const QuizScreen: React.FC<QuizScreenProps> = ({ chapter, topic }) => {
     const [quizState, setQuizState] = useState<'loading' | 'in-progress' | 'results'>('loading');
@@ -50,7 +59,12 @@ const QuizScreen: React.FC<QuizScreenProps> = ({ chapter, topic }) => {
             setQuizState('loading');
             const fetchedQuestions = await getQuizQuestions(chapter, topic);
             if (fetchedQuestions && fetchedQuestions.length > 0) {
-                setQuestions(fetchedQuestions);
+                // Randomize options for each question
+                const randomizedQuestions = fetchedQuestions.map(q => ({
+                    ...q,
+                    options: shuffleArray([...q.options])
+                }));
+                setQuestions(randomizedQuestions);
                 setCurrentQuestionIndex(0);
                 setScore(0);
                 setSelectedOption(null);
@@ -132,7 +146,8 @@ const QuizScreen: React.FC<QuizScreenProps> = ({ chapter, topic }) => {
                                         buttonClass += 'bg-gray-100 dark:bg-slate-700 border-gray-200 dark:border-slate-600 opacity-60';
                                     }
                                 } else {
-                                    buttonClass += 'bg-white dark:bg-slate-900/50 text-[color:var(--text-primary)] hover:bg-teal-100/70 dark:hover:bg-slate-700 border-[var(--card-border)] hover:border-[var(--accent-secondary)]';
+                                    // FIX: Changed button background from bg-white to bg-slate-800 to ensure visibility in the dark theme.
+                                    buttonClass += 'bg-slate-800 text-[color:var(--text-primary)] hover:bg-slate-700 border-[var(--card-border)] hover:border-[var(--accent-secondary)]';
                                 }
                                 return (
                                     <button key={index} onClick={() => handleAnswerSelect(option)} disabled={!!selectedOption} className={buttonClass}>
