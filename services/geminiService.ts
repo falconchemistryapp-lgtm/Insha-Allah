@@ -317,16 +317,16 @@ async function getNumericalExamples(chapter: string, topic: string, prompt: stri
 
 
 export async function getNcertTextbookQuestions(chapter: string, topic: string): Promise<NumericalProblem[]> {
-    // Reduced to 2 problems to improve generation speed (latency).
-    const prompt = `Generate exactly 2 important solved numerical problems for a Karnataka State Board PUC student. The questions must be strictly based on the official NCERT textbook syllabus as prescribed for the Karnataka State Board for the topic "${topic}" from the chapter "${chapter}". These should be typical 'textbook-style' questions. Each problem must come with a detailed, step-by-step solution following the prescribed format.`;
-    const cacheKey = `ncert-questions-v2-${chapter}-${topic}`;
+    // Increased to 5 problems as per user request.
+    const prompt = `Generate exactly 5 important solved numerical problems for a Karnataka State Board PUC student. The questions must be strictly based on the official NCERT textbook syllabus as prescribed for the Karnataka State Board for the topic "${topic}" from the chapter "${chapter}". These should be typical 'textbook-style' questions. Each problem must come with a detailed, step-by-step solution following the prescribed format.`;
+    const cacheKey = `ncert-questions-v3-${chapter}-${topic}`;
     return getNumericalExamples(chapter, topic, prompt, cacheKey);
 }
 
 export async function getCompetitiveNumericals(chapter: string, topic: string): Promise<NumericalProblem[]> {
-     // Reduced to 2 problems to improve generation speed (latency).
-    const prompt = `Generate exactly 2 challenging, competitive exam level (like JEE/NEET) numerical problems for the topic "${topic}" from the chapter "${chapter}". The problems should test deep conceptual understanding. Each problem must come with a detailed, step-by-step solution following the prescribed format.`;
-    const cacheKey = `competitive-numericals-v2-${chapter}-${topic}`;
+     // Increased to 5 problems.
+    const prompt = `Generate exactly 5 challenging, competitive exam level (like JEE/NEET) numerical problems for the topic "${topic}" from the chapter "${chapter}". The problems should test deep conceptual understanding. Each problem must come with a detailed, step-by-step solution following the prescribed format.`;
+    const cacheKey = `competitive-numericals-v3-${chapter}-${topic}`;
     return getNumericalExamples(chapter, topic, prompt, cacheKey);
 }
 
